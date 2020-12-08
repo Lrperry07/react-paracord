@@ -4,7 +4,7 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar fixed-bottom nav-color">
+                <nav className="navbar fixed-bottom nav-success">
                     <a className="navbar-brand" ></a>
                 </nav>
             </div>
