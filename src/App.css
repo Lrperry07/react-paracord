@@ -77,10 +77,26 @@
     background-color: #81592b;
   }
   .sign-up-container{
+    background-color: #ee6e73;
     max-width: 700px;
     margin-top: 10%;
   }
   .about-us-container{
+    background-color: #ee6e73;
   margin-top: 200px;
   width: 680px;
+  }
+  .signIn-container{
+    background-color: #ee6e73;
+    margin-top: 200px;
+    width: 680px;
+    max-width: 700px;
+  }
+  .shop-container{
+    margin-top: 200px;
+    width: 680px;
+  }
+  .cart-container{
+    margin-top:200px;
+    width: 680px;
   }

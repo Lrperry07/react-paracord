@@ -19,7 +19,7 @@ class LayOut extends Component {
             //See before you login
             <div>
                 {/* <Route path="/signup" component={SignUp} /> */}
-                 <Route Path="/signin" component={SignIn} /> 
+                 {/* <Route Path="/signin" component={SignIn} />  */}
                 <Route path="/thank-you" component={Thankyou} />
             </div>
         );
