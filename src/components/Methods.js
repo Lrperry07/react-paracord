@@ -4,17 +4,20 @@ import { connect } from 'react-redux'
 
 class Methods extends Component{
     
-    componentWillUnmount() {
-         if(this.shipping.checked)
-              this.props.substractShipping()
+    state = {
+        checked : false
     }
+
+
 
     handleChecked = (e)=>{
         if(e.target.checked){
             this.props.addShipping();
+            this.state.checked = true;
         }
         else{
             this.props.substractShipping();
+            this.state.checked = false;
         }
     }
 

@@ -14,9 +14,9 @@
     color: rgb(243, 10, 10);
     font-weight: 400
 }
-.cart{
+/* .cart{
     margin-top:40px;
-}
+} */
 .collection .collection-item{
     display: flex;
 }
@@ -37,6 +37,8 @@
 }
 .App {
     text-align: center;
+    background-color: blueviolet;
+   
   }
   
   .App-logo {
@@ -51,14 +53,14 @@
   }
   
   .App-header {
-    background-color: #282c34;
+    background-color: #0e41a8;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: rgb(128, 17, 17);
   }
   
   .App-link {
@@ -82,7 +84,7 @@
     margin-top: 10%;
   }
   .about-us-container{
-    background-color: #ee6e73;
+    background-color: #72ee6e;
   margin-top: 200px;
   width: 680px;
   }
@@ -99,4 +101,7 @@
   .cart-container{
     margin-top:200px;
     width: 680px;
+  }
+  .header-container{
+    background-color: aqua;
   }

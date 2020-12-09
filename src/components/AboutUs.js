@@ -2,6 +2,8 @@ import Header from './Header';
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Route } from 'react-dom';
+//import about1 from './about1.png';
+
 
 
 
@@ -19,9 +21,9 @@ class AboutUs extends Component {
                         {/* First Grid: Logo & About   */}
                         <div className="w3-row">
                             <div className="w3-half w3-container">
-                                <h1 className="w3-xxlarge w3-text-light-grey">Hello</h1>
-                                <h1 className="w3-xxlarge w3-text-grey">I Am Richard aka "BATMAN"!!</h1>
-                                <h1 className="w3-jumbo">*GASP*Not Really*Sigh*</h1>
+                                <h1 className="w3-xxlarge w3-text-light-grey">Hello New Customers!!!!</h1>
+                                <h1 className="w3-xxlarge w3-text-grey">Welcome to Perry's Cord Shop</h1>
+                                <h1 className="w3-jumbo">Come get some New Threads!!!</h1>
                             </div>
                             <div className="w3-half w3-container w3-xlarge w3-text-grey">
                                 <p className="">I am a 27 yr/old veteran(USAF) who loves to game!
@@ -37,7 +39,7 @@ class AboutUs extends Component {
                         </div>
                         <div className="w3-row">
                             <div className="w3-half w3-container">
-                                {/* <img src={pic3} style={{ width: '100%' }} /> */}
+                                {/* <img src={about1} style={{ width: '100%' }} /> */}
                             </div>
                             <div className="w3-half w3-container">
                                 {/* <img src={pic2} style={{ width: '100%' }} /> */}

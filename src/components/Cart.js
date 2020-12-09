@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from './actions/cartActions'
 import Methods from './Methods'
+import Shop from './Shop';
 
 
 class Cart extends Component{
@@ -40,10 +41,10 @@ class Cart extends Component{
                                             <b>Quantity: {item.quantity}</b> 
                                         </p>
                                         <div className="add-remove">
-                                            <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}>arrow_drop_up</i></Link>
-                                            <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>arrow_drop_down</i></Link>
+                                            <Link to="/cart"><i className="btn btn-outline-success" onClick={()=>{this.handleAddQuantity(item.id)}}>+</i></Link>
+                                            <Link to="/cart"><i className="btn btn-outline-danger" onClick={()=>{this.handleSubtractQuantity(item.id)}}>-</i></Link>
                                         </div>
-                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
+                                        <button className="btn btn-danger remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
                                     </div>
                                     
                                 </li>
@@ -53,7 +54,8 @@ class Cart extends Component{
             ):
 
              (
-                <p>Nothing.</p>
+                <p>Your Shopping Cart is Empty. Lets Go Shopping!!!</p>
+               
              )
        return(
             <div className="container cart-container">

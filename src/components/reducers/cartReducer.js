@@ -1,15 +1,38 @@
-
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../actions/action-types/cart-actions'
+//import "images"
 
 
+/*
+1) All Black - Bracelet
+2) Black & White Valk* - Bracelet
+3) Gray & Yellow -Bracelet
+4) Army Green - Bracelet
+5) Black & Pink - Bracelet
+6) Love Elephant - Bracelet
+7) Valkerie Yellow & White - Bracelet
+8) Valkerie Gold & Brown - Bracelet
+9) Kids Cotton Candy/Rainbow combo - Bracelet
+10) Unicorn poop - Bracelet
+11) Yellow and Red - Bracelet
+12) Red on Black - Bracelet
+13) White - Bracelet
+*/
 const initState = {
     items: [
-        {id:1,title:'Winter body', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:110},//,img:Item1},
-        {id:2,title:'Adidas', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:80},//img: Item2},
-        {id:3,title:'Vans', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",price:120},//,img: Item3},
-        {id:4,title:'White', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price:260},//,img:Item4},
-        {id:5,title:'Cropped-sho', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex."},//, price:160,img: Item5},
-        {id:6,title:'Blues', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",price:90},//,img: Item6}
+        {id:1,title:'Bracelet', desc: "All Black ", price:10},//,  img: img: Item1},
+        {id:2,title:'Bracelet', desc: "Black & White Valkerie Weave", price:12},//img: Item2},
+        {id:3,title:'Bracelet', desc: "Gray, Yellow and Black",price:10},//,img: Item3},
+        {id:4,title:'Bracelet', desc: "Army Green With Gold Flakes", price:10},//,img:Item4},
+        {id:5,title:'Bracelet', desc: "Black & Pink", price:10},//, price:160,img: Item5},
+        {id:6,title:'Bracelet', desc: "Love Elephants",price:20},//,img: Item6}
+        {id:7,title:'Bracelet', desc: "Yellow, White, & Gray Valkerie Weave", price:10},
+        {id:8,title:'Bracelet', desc: "Black, White, & Brown / Gold Flakes Valkerie Weave", price:10},
+        {id:9,title:'Bracelet', desc: "Kids Cotton Candy/Rainbow combo pair", price:10},
+        {id:10,title:'Bracelet', desc: "Unicorn Poop", price:10},
+        {id:11,title:'Bracelet', desc: "Yellow, Red, & Black(Thick)", price:10},
+        {id:12,title:'Bracelet', desc: "Red, Black, & White", price:10},
+        {id:13,title:'Bracelet', desc: "White Mix", price:10},
+
     ],
     addedItems:[],
     total: 0
@@ -17,7 +40,7 @@ const initState = {
 }
 const cartReducer= (state = initState,action)=>{
    
-    //INSIDE HOME COMPONENT
+    
     if(action.type === ADD_TO_CART){
           let addedItem = state.items.find(item=> item.id === action.id)
           //check if the action id exists in the addedItems

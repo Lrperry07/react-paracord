@@ -8,6 +8,7 @@ import Axios from 'axios';
 
 
 
+
 class Header extends Component {
 
     state = {
@@ -23,13 +24,13 @@ class Header extends Component {
          tempUser[name] = value;
          this.setState(
              {
-                 User: tempUser
+                 user: tempUser
              }
          );
      }
-     handleSubmit = () => {
-
-         Axios.post('http://localhost:8080/loginUser', this.state.user)
+     handleSubmit = (event) => {
+        event.preventDefault();
+         Axios.post('http://localhost:8080/loginuser', this.state.user)
              .then(response => {
                  //navigate to home page
                  localStorage.setItem("loggedInUser", response.data.email);
@@ -46,13 +47,13 @@ class Header extends Component {
      }
 
     render() {
-         //let signInSignOut = (
-        //   <form className="form-inline mt-2 mt-md-0">
-        //       <input onChange={this.handleChange} value={this.state.user.email} name="email" className="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Email" />
-        //       <input onChange={this.handleChange} value={this.state.user.password} name="password" className="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" />
-        //       <button className="btn btn-outline-info my-2 my-sm-0" onClick={this.handleSubmit} type="button">Sign In</button>
-        //   </form>
-        // );
+         let signInSignOut = (
+           <form className="form-inline mt-2 mt-md-0" onSubmit={this.handleSubmit}>
+               <input onChange={this.handleChange} value={this.state.email} name="email" className="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Email" />
+               <input onChange={this.handleChange} value={this.state.password} name="password" className="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" />
+               <button className="btn btn-outline-info my-2 my-sm-0"  type="submit">Sign In</button>
+           </form>
+         );
         let links = (
             <li className="nav-item active">
                 <Link className="nav-link" to="/signup">Sign Up <span className="sr-only">(current)</span></Link>
@@ -60,21 +61,21 @@ class Header extends Component {
         );
 
          if (localStorage.getItem("loggedInUser")) {
-            //  signInSignOut = (
-            //     <button className="btn btn-outline-info my-2 my-sm-0"
-            //          onClick={this.signOut} type="button">
-            //          Sign Out
-            //      </button>
-            //  );
+              signInSignOut = (
+                 <button className="btn btn-outline-info my-2 my-sm-0"
+                      onClick={this.signOut} type="button">
+                      Sign Out
+                  </button>
+              );
              links = (
                  <li className="nav-item active">
-                     <Link className="nav-link" to="/settings">Settings <span className="sr-only">(current)</span></Link>
+                     <Link className="nav-link" to="/Home">Home <span className="sr-only">(current)</span></Link>
                  </li>
              );
          }
         return (
-            <div className="mb-7 inline mt-2 mt-md-0">
-                <nav className="navbar navbar-expand-md navbar-light fixed-top">
+            <div className="mb-7 inline mt-2 mt-md-0 ">
+                <nav className="navbar navbar-expand-lg navbar-light fixed-top">
                     <Link className="navbar-brand" to="/">Perry's Cord Shop</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -90,7 +91,8 @@ class Header extends Component {
 
                             </li>
                         </ul>
-                         {/* {signInSignOut} */ }
+                       
+                          {signInSignOut}  
                     </div>
                 </nav>
             </div>
