@@ -2,26 +2,24 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from './actions/cartActions'
-import Methods from './Methods'
-import Shop from './Shop';
-import '../App.css';
+// import Methods from './Methods'
+// import Shop from './Shop';
 
 
+class SavedItems extends Component{
 
-class Cart extends Component{
-
-    //to remove the item completely
-    handleRemove = (id)=>{
-        this.props.removeItem(id);
-    }
-    //to add the quantity
-    handleAddQuantity = (id)=>{
-        this.props.addQuantity(id);
-    }
-    //to substruct from the quantity
-    handleSubtractQuantity = (id)=>{
-        this.props.subtractQuantity(id);
-    }
+    // //to remove the item completely
+    // handleRemove = (id)=>{
+    //     this.props.removeItem(id);
+    // }
+    // //to add the quantity
+    // handleAddQuantity = (id)=>{
+    //     this.props.addQuantity(id);
+    // }
+    // //to substruct from the quantity
+    // handleSubtractQuantity = (id)=>{
+    //     this.props.subtractQuantity(id);
+    // }
     render(){
               
         let addedItems = this.props.items.length ?
@@ -31,20 +29,20 @@ class Cart extends Component{
                        
                         
                         <li className="collection-item avatar" key={item.id}>
-                                    <div className="item-img "> 
-                                        <img src={item.img} alt={item.img} className="img-cart"/>
+                                    <div className="item-img"> 
+                                        <img src={item.img} alt={item.img} className=""/>
                                     </div>
                                 
-                                    <div className="card bg-secondary item-desc ">
-                                        <a className="title">{item.title}</a>
+                                    <div className="item-desc">
+                                        <span className="title">{item.title}</span>
                                         <p>{item.desc}</p>
                                         <p><b>Price: {item.price}$</b></p> 
                                         <p>
                                             <b>Quantity: {item.quantity}</b> 
                                         </p>
                                         <div className="add-remove">
-                                            <Link to="/cart"><i className="btn btn-success" onClick={()=>{this.handleAddQuantity(item.id)}}>+</i></Link>
-                                            <Link to="/cart"><i className="btn btn-danger" onClick={()=>{this.handleSubtractQuantity(item.id)}}>-</i></Link>
+                                            <Link to="/cart"><i className="btn btn-outline-success" onClick={()=>{this.handleAddQuantity(item.id)}}>+</i></Link>
+                                            <Link to="/cart"><i className="btn btn-outline-danger" onClick={()=>{this.handleSubtractQuantity(item.id)}}>-</i></Link>
                                         </div>
                                         <button className="btn btn-danger remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
                                     </div>
@@ -60,16 +58,14 @@ class Cart extends Component{
                
              )
        return(
-
-        
-            <div style={{color: "white"}} className="container cart-container">
+            <div className="container about-us-container">
                 <div className="cart">
-                    <h1>You have ordered:</h1>
+                    <h5 style={{color: "white"}}>You have saved these Items for Later:</h5>
                     <ul className="collection">
                         {addedItems}
                     </ul>
                 </div> 
-                <Methods />          
+                        
             </div>
        )
     }
@@ -89,4 +85,4 @@ const mapDispatchToProps = (dispatch)=>{
         subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
     }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Cart)
+export default connect(mapStateToProps,mapDispatchToProps)(SavedItems)

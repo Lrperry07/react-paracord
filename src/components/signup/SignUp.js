@@ -38,8 +38,8 @@ class SignUp extends Component {
     
     render() {
         return (
-            <div>
-                <form className="container sign-up-container" onSubmit={this.handleSubmit}>
+            <div>                
+                <form style={{color: "white"}} className="container sign-up-container" onSubmit={this.handleSubmit}>
                     <h1>Sign Up Below!!!</h1>
                     <div className="row mb-4">
                         <div className="col">

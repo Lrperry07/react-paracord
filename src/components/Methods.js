@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 
 
 class Methods extends Component{
@@ -35,13 +36,12 @@ class Methods extends Component{
                         <li className="collection-item"><b>Total: {this.props.total} $</b></li>
                     </div>
                     <div className="checkout">
-                        <button className="waves-effect waves-light btn">Checkout</button>
+                        <Link to="/thank-you"><button className="btn btn-secondary">Checkout</button></Link>
                     </div>
                  </div>
         )
     }
 }
-
 const mapStateToProps = (state)=>{
     return{
         addedItems: state.addedItems,

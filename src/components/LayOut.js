@@ -8,8 +8,11 @@ import Header from './Header';
 import Footer from './Footer';
 import Cart from './Cart';
 //import UserProfile from './Home';
+import '../index.css'
 import SignIn from './SignIn';
 import Shop from './Shop';
+import SavedItems from './SavedItems';
+
 
 
 
@@ -17,7 +20,7 @@ class LayOut extends Component {
     render() {
         let routes = (
             //See before you login
-            <div>
+            <div className="">
                 {/* <Route path="/signup" component={SignUp} /> */}
                  {/* <Route Path="/signin" component={SignIn} />  */}
                 <Route path="/thank-you" component={Thankyou} />
@@ -29,6 +32,10 @@ class LayOut extends Component {
                 <div>
                     {/* <Route path="/cart" component={Cart} /> */}
                     <Route path="/home" component={Home} />
+                    <Route path="/savedItems" component={SavedItems} />
+                    <Route path="/thank-you" component={Thankyou} />
+                    {/* <Route path="/shop" component={Shop} /> */}
+                
                 </div>
             )
         }

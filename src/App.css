@@ -28,16 +28,18 @@
     margin-bottom: 20px;
     
 }
-.collection .collection-item img{
+/* .collection .collection-item img{
     width: 150px;
     margin-right: 25px;
-}
+} */
 .item-desc{
     align-self:center;
+
+
 }
 .App {
     text-align: center;
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
    
   }
   
@@ -53,7 +55,7 @@
   }
   
   .App-header {
-    background-color: #0e41a8;
+    background-color: #e27713;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -61,10 +63,10 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: rgb(128, 17, 17);
-  }
+  } 
   
   .App-link {
-    color: #61dafb;
+    color: #f7f443;
   }
   
   @keyframes App-logo-spin {
@@ -75,33 +77,59 @@
       transform: rotate(360deg);
     }
   }
-  .nav-color{
-    background-color: #81592b;
-  }
+   .nav-color{
+    background-color:#1d5b5e;
+  } 
   .sign-up-container{
-    background-color: #ee6e73;
+    background-color: #1d5b5e4d;
     max-width: 700px;
-    margin-top: 10%;
+    margin-top: 17%;
   }
   .about-us-container{
-    background-color: #72ee6e;
-  margin-top: 200px;
-  width: 680px;
+    background-color: #1d5b5ef8;
+    margin-top: 17%;
+    width: 680px;
   }
   .signIn-container{
-    background-color: #ee6e73;
+    
+    background-color: #1d5b5eb2;
     margin-top: 200px;
     width: 680px;
     max-width: 700px;
   }
   .shop-container{
+    background:  #1d5b5e4d;
     margin-top: 200px;
     width: 680px;
   }
   .cart-container{
+    background:  #1d5b5e86;
     margin-top:200px;
     width: 680px;
   }
   .header-container{
-    background-color: aqua;
+    background-color:  #1d5b5e4d;
   }
+  .home-container{
+    background-color:  #1d5b5ef8;
+    margin-top: 200px;
+     
+  }
+  .App-Background{
+    color: #529fa3af;
+  }
+  .thank-you-container{
+    color:  #1d5b5e4d;
+    margin-top:200px;
+    width: 680px;
+    background-color: #1d5b5e4d;
+  }
+  .img-cart {
+    object-fit: cover;
+    height: 200px;
+    width:200px;
+    
+    }
+    .style{
+      max-width: 18rem;
+    }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Carousel } from 'react-responsive-carousel';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css';
-import './index.css'
+//import './index.css';
 // //import Navbar from './components/Navbar'
 // import Home from './components/Home'
 // import Cart from './components/Cart'
@@ -14,11 +15,15 @@ import LayOut from './components/LayOut';
 
 
 function App() {
+
   return (
+
    <BrowserRouter>
-   <LayOut/>
+     <LayOut/><Carousel/>
    </BrowserRouter>
+
   );
 }
+
 
 export default App;
